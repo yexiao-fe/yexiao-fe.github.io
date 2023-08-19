@@ -1,18 +1,41 @@
-# Vue 3 + TypeScript + Vite
+# 项目启动命令
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+```bash
+yarn
+yan dev
+```
 
-## Recommended IDE Setup
+# 项目目录
+- 根据命令生成目录树，自定义标注每个文件或文件夹的作用
+- 只记录主要目录，如果有特殊文件或文件夹，请在目录树下面单独标注
+- 向上引用，
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support For `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## 目录树
+```
+`项目名称`
+├── src
+│   ├── api  # 请求接口
+│   ├── assets  # 静态资源，一般存放图片、音视频、css样式
+│   │   └── vue.svg
+│   ├── components  # 通用业务组件，组件中可能含有api
+│   │   └── HelloWorld.vue
+│   ├── directives # 指令集
+│   ├── filters # 过滤器，一般用来数据转换
+│   ├── layout  # 项目布局
+│   ├── router # 路由配置
+│   ├── storage  # 前端存储数据，localStorage和sessionStorage的存取都在此文件夹
+│   ├── store  # 状态管理中心
+│   ├── utils  # 工具库，自定义函数
+│   ├── views  # 页面模版，路由页面或其他展示页面
+│   ├── App.vue  # 试图入口
+│   ├── main.ts  # 入口文件
+│   ├── style.css  # 全局样式
+│   └── vite-env.d.ts
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+└── yarn.lock
+```
+## 特殊文件或文件夹标注区域
+```
+```
