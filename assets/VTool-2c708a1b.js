@@ -1,0 +1,1 @@
+import{d as a,c as s,F as n,a as r,o as t,b as c,t as l}from"./index-39422c13.js";const _={class:"wrapper"},i={class:"left"},f=a({__name:"VTool",setup(p){const e=[1,2,3];return console.log(e),(d,m)=>(t(),s("div",_,[(t(),s(n,null,r(e,o=>c("div",i,l(o),1)),64))]))}});export{f as default};
