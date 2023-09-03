@@ -1,47 +1,76 @@
 
 <script setup lang="ts">
 import {ref} from 'vue'
-const docList = ref([])
-const classNames = ['red', 'orange', 'yellow', 'green', 'cyan','blue', 'purple']
+import { documentList } from '@/mock'
+const docList = ref(documentList)
 function openWindow(url) {
     window.open(url)
 }
 </script>
 <template>
    <ul>
-        <li v-for="(doc, i) in docList" :key="i" :class="doc.className">
-            <div>{{doc.title}}</div>
-            <span v-for="(item, index) in doc.detail" :key="`${i}-${index}`" @click="openWindow(item.url)">{{item.name}}</span>
+        <li v-for="(doc, i) in docList" :key="i">
+            <div class="title">{{doc.title}}</div>
+            <div v-for="(item, index) in doc.detail" :key="`${i}-${index}`" @click="openWindow(item.url)" class="item">
+                <div class="name">{{item.name}}</div>
+                <div class="tip">
+                    <span>{{ item.name.slice(0,1) }}</span>
+                    <span> | </span>
+                    <span>{{ item.isEn ? '英' : '中' }}文文档</span>
+                </div>
+            </div>
         </li>
    </ul>
 </template>
 
-<style scoped>
+<style lang="less" scoped>
 ul {
     padding: 20px;
-}
-ul li {
-    margin-bottom: 20px;
-    overflow: hidden;
-}
-ul li div {
-    border-left: 5px solid var(--c1);
-    background: linear-gradient(45deg, var(--c2), transparent);
-    font:16px bold;
-    text-indent: 5px;
-}
+    color: #000;
+    li {
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    .title {
+        border-left: 5px solid @cyan-color-1;
+        background: linear-gradient(45deg, @cyan-color-2, transparent);
+        font: 16px bold;
+        text-indent: 5px;
+        padding: 5px 0;
+    }
+    .item {
+        float: left;
+        padding: 5px 0;
+        text-align: center;
+        background-color:@white-color-1;
+        border-radius: 4px;
+        margin: 10px;
+        cursor: pointer;
+        transition: transform 0.1s linear;
+        .name,
+        .tip {
+            padding: 0 10px;
+            line-height: 30px;
+        }
+        .name {
+            border-bottom: 1px solid @black-color-30;
+        }
 
-ul li span {
-    float: left;
-    padding: 5px 10px;
-    border-radius: 4px;
-    border: 1px solid var(--c1);
-    margin: 10px;
-    cursor: pointer;
-    transition: transform 0.1s linear;
-}
-ul li span:hover {
-    background-color: var(--c2);
-    transform: translateY(-5px);
+        .tip {
+            font-size: 12px;
+            color: @purple-color-1;
+            span:nth-child(3) {
+                color: @white-color-1;
+                padding: 4px 6px;
+                background-color: @purple-color-1;
+            }
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 3px 5px @black-color-1;
+            color: @orange-color-1;
+        }
+    }
 }
 </style>

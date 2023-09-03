@@ -15,7 +15,7 @@ const route = useRoute();
 /*************数据***************/
 // 导航
 const navList = [
-  { name: "homepage", label: "首页", path: "/home" },
+  { name: "homepage", label: "首页", path: "/homepage" },
   { name: "article", label: "文章", path: "/article" },
   { name: "demo", label: "Demo示例", path: "/demo" },
   { name: "tool", label: "工具", path: "/tool" },
