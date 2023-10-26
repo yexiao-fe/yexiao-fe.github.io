@@ -12,7 +12,7 @@ const emit = defineEmits(["change"]);
 const route = useRoute();
 
 /*************数据***************/ 
-const navActivePath = computed(() => route.path);
+const navActivePath = computed(() => '/' + route.path.split('/')[1]);
 
 /*************自定义函数***************/ 
 function changeClick() {

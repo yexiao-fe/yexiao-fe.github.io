@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps({
-  value: Object
+  value: Object,
 });
 </script>
 
@@ -8,8 +8,8 @@ defineProps({
   <div class="box">
     <div :class="`icon ${value.icon}`"></div>
     <div class="text">
-      <span>{{value.name}}</span>
-      <span>{{value.value}}</span>
+      <span>{{ value.name }}</span>
+      <span>{{ value.value }}</span>
     </div>
   </div>
 </template>
@@ -17,15 +17,20 @@ defineProps({
 <style lang="less" scoped>
 .box {
   width: 208px;
-  height: 120px;
+  height: 100px;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  color: @black-color-1;
-  background-color: @white-color-1;
-  box-shadow: 0 0 15px @black-color-30;
-  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  margin-bottom: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s linear;
+  &:hover {
+    transform: translateX(20px);
+  }
   .icon {
     &.article {
       --icon: url(@/assets/images/article.svg);

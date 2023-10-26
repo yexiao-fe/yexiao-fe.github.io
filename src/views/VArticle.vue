@@ -5,36 +5,47 @@ const list = ref(articleList);
 </script>
 
 <template>
-  <div v-for="(exp, index) in list" :key="index" class="exp-item">
+  <div v-for="(item, index) in list" :key="index" class="art-item">
     <div class="content">
-      <div class="question">{{ exp.question }}</div>
-      <div v-html="exp.answer" class="answer"></div>
+      <div class="title">{{ item.title }}</div>
+      <div class="desc">{{ item.desc }}</div>
+      <div class="time">{{ item.time }}</div>
     </div>
-    <div class="label">{{ exp.label }}</div>
+    <div class="label">{{ item.label }}</div>
   </div>
 </template>
 
 <style lang="less" scoped>
-.exp-item {
-  margin: 20px 20px 0;
+.art-item {
+  margin: 20px auto 0;
+  max-width: 820px;
+  border-radius: 5px;
   color: @black-color-1;
-  background-color: @purple-color-2;
+  background-color: #fff;
   display: flex;
   align-items: center;
+  cursor: pointer;
   .content {
       flex: 1;
       padding: 20px;
-      .question {
+      width: ~'calc(100% - 140px)';
+      div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .title {
           font-weight: bold;
+          white-space: nowrap;
       }
-      /deep/ ol li {
-          list-style: decimal;
+      .desc {
+          color: #8a919f;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          margin: 10px 0;
       }
-      /deep/ ul li {
-          list-style: initial;
-      }
-      .answer {
-          padding-left: 20px;
+      .time {
+
       }
   }
   .label {

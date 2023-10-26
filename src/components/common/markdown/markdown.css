@@ -1,0 +1,308 @@
+/* pre code 代码片段 */
+pre code[class*=language-] {
+    position: relative;
+    border-radius: 6px
+}
+pre code[class*=language-]:before {
+    position: absolute;
+    z-index: 3;
+    top: .8em;
+    right: 1em;
+    font-size: .75rem;
+    color: hsla(0,0%,100%,.4)
+}
+
+pre code[class~=language-js]:before,
+pre code[class~=language-javascript]:before {
+    content: "js"
+}
+
+pre code[class~=language-ts]:before,
+pre code[class~=language-typescript]:before {
+    content: "ts"
+}
+
+pre code[class~=language-html]:before {
+    content: "html"
+}
+
+pre code[class~=language-md]:before,
+pre code[class~=language-markdown]:before {
+    content: "md"
+}
+
+pre code[class~=language-vue]:before {
+    content: "vue"
+}
+
+pre code[class~=language-css]:before {
+    content: "css"
+}
+
+pre code[class~=language-sass]:before {
+    content: "sass"
+}
+
+pre code[class~=language-scss]:before {
+    content: "scss"
+}
+
+pre code[class~=language-less]:before {
+    content: "less"
+}
+
+pre code[class~=language-stylus]:before {
+    content: "stylus"
+}
+
+pre code[class~=language-go]:before {
+    content: "go"
+}
+
+pre code[class~=language-java]:before {
+    content: "java"
+}
+
+pre code[class~=language-c]:before {
+    content: "c"
+}
+
+pre code[class~=language-sh]:before,
+pre code[class~=language-bash]:before {
+    content: "sh"
+}
+
+pre code[class~=language-yaml]:before {
+    content: "yaml"
+}
+
+pre code[class~=language-py]:before,
+pre code[class~=language-python]:before {
+    content: "py"
+}
+
+pre code[class~=language-json]:before {
+    content: "json"
+}
+
+/* 颜色变量 */
+.markdown-body,
+.markdown {
+    --vt-c-green: #42b883;
+    --vt-c-green-light: #42d392;
+    --vt-c-green-lighter: #35eb9a;
+    --vt-c-green-dark: #33a06f;
+    --vt-c-green-darker: #155f3e;
+}
+
+/* a 标签 */
+.markdown-body a {
+    font-weight: 500;
+    color: var(--vt-c-green);
+    transition: color .25s;
+    text-decoration-style: dotted;
+    padding-right: 10px;
+    position: relative;
+}
+
+.markdown-body a::after {
+    content: '➞';
+    position: absolute;
+    transform: rotate(-45deg) translateX(2px);
+    font-size: 12px;
+    right: 0;
+}
+
+/* code 标签 */
+.markdown-body :not(pre)>code {
+    background-color: #f1f1f1;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    color: var(--vt-c-green-dark);
+    transition: color .5s, background-color .5s;
+}
+
+/* blockquote 区块标签 */
+.markdown-body blockquote, pre code[class~=language-js] {
+    font-size: 14px;
+    padding: 6px 23px;
+    margin: 22px 0;
+    border-left: 6px solid var(--vt-c-green-dark);
+    background-color: #f3f5f7;
+    font-weight: 400;
+}
+
+/* em strong 标签 */
+.markdown-body strong {
+    color: var(--vt-c-green-dark);
+}
+.markdown-body strong:before {
+    content: "「";
+}
+.markdown-body strong:after {
+    content: "」";
+}
+
+/* h 标签 */
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+    margin-top: 35px;
+    margin-bottom: 10px;
+    color: var(--vt-c-green);
+}
+.markdown-body h1 {
+    padding: 30px 0;
+    text-align: center;
+}
+.markdown-body h2 {
+    border-bottom: 4px solid var(--vt-c-green);
+    padding: 12px 0;
+}
+
+.markdown-body h2::before {
+    content: '🍎';
+    padding-right: 0.23em;
+}
+
+.markdown-body h3 {
+    border-bottom: 2px solid var(--vt-c-green);
+    padding: 5px 0;
+    width: max-content;
+}
+
+.markdown-body h3::before {
+    content: '🍑';
+    padding-right: 0.23em;
+}
+
+.markdown-body h4::before {
+    content: '🍓';
+    padding-right: 0.23em;
+}
+
+.markdown-body h5::before {
+    content: '🍊';
+    padding-right: 0.23em;
+}
+
+.markdown-body h6::before {
+    content: '🍇';
+    padding-right: 0.23em;
+}
+
+/* table */
+.markdown-body table {
+    display: inline-block!important;
+    width: auto;
+    max-width: 100%;
+    overflow: auto;
+    border: 1px solid #33a06f87;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.markdown-body table th {
+    color: var(--vt-c-green);
+    background-color: #f3f5f7;
+}
+.markdown-body table td, .markdown-body table th {
+    padding: 12px 8px;
+    line-height: 24px;
+    border: 1px solid #33a06f87;
+    text-align: left;
+}
+.markdown-body table td {
+    min-width: 120px;
+}
+
+/* 提示 */
+pre code[class~=language-tip],
+pre code[class~=language-tip-warning],
+pre code[class~=language-tip-error] {
+    border-radius: 0;
+    font-size: 14px;
+    padding: 6px 23px;
+    margin: 22px 0;
+    border-left: 6px solid;
+    background-color: #f3f5f7;
+    font-weight: 400;
+}
+
+pre code[class~=language-tip] {
+    border-left-color: var(--vt-c-green-dark);
+}
+
+pre code[class~=language-tip-warning] {
+    border-left-color: #ffc517;
+}
+
+pre code[class~=language-tip-error] {
+    border-left-color: #ed3c50;
+}
+
+/* img video */
+.markdown-body video,
+.markdown-body img {
+    max-width: 100%;
+}
+
+/* 布局 和 目录 */
+.markdown {
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+}
+.markdown>div {
+    box-sizing: border-box;
+    padding: 20px;
+}
+.markdown-body {
+    max-width: 820px;
+}
+.markdown-list {
+    width: 300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #252933;
+}
+
+.markdown-list div {
+    font-weight: bold;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.markdown-list a {
+    display: block;
+    line-height: 28px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: inherit;
+}
+.markdown-list a::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 70%;
+    top: 15%;
+    left: 0;
+    background-color: var(--vt-c-green);
+    display: none;
+}
+
+.markdown-list a.active,
+.markdown-list a:hover {
+    color: var(--vt-c-green);
+}
+
+.markdown-list a.active::before {
+    display: initial;
+}
+
+@media screen and (max-width: 1140px) {
+    .markdown-list {
+        display: none;
+    }
+}

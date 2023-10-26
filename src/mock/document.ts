@@ -11,6 +11,10 @@ interface children {
 
 const document: Array<children> = [
     {
+        title: '个人技术文档',
+        detail: []
+    },
+    {
         title: '综合技术文档',
         detail: [
             {
@@ -155,10 +159,6 @@ const document: Array<children> = [
                 isEn: true,
             },
         ]
-    },
-    {
-        title: '个人技术文档',
-        detail: []
     },
     {
         title: '其他技术文档',

@@ -26,7 +26,6 @@ function openWindow(url) {
 <style lang="less" scoped>
 ul {
     padding: 20px;
-    color: #000;
     li {
         margin-bottom: 20px;
         overflow: hidden;
@@ -37,23 +36,26 @@ ul {
         font: 16px bold;
         text-indent: 5px;
         padding: 5px 0;
+        color: #000;
     }
     .item {
         float: left;
         padding: 5px 0;
         text-align: center;
-        background-color:@white-color-1;
+        background-color:rgba(0, 0, 0, 0.8);
         border-radius: 4px;
         margin: 10px;
         cursor: pointer;
         transition: transform 0.1s linear;
+        min-width: 150px;
         .name,
         .tip {
             padding: 0 10px;
-            line-height: 30px;
+            line-height: 36px;
         }
         .name {
-            border-bottom: 1px solid @black-color-30;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            font-weight: bold;
         }
 
         .tip {
