@@ -27,7 +27,35 @@ const experience: Array<item> = [
         time: '2021-07-06 00:56',
         id: 'nginx-1',
         desc: 'Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。'
-    }
+    },
+    {
+        title: '日期格式化',
+        label: 'js-2',
+        time: '2020-11-02 23:25:43',
+        id: 'js-2',
+        desc: ''
+    },
+    {
+        title: '览器解析过程',
+        label: '基础',
+        time: '2020-08-19 14:02:38',
+        id: 'base-1',
+        desc: ''
+    },
+    {
+        title: 'CSS hack',
+        label: '基础',
+        time: '2020-07-29 17:55:13',
+        id: 'base-2',
+        desc: ''
+    },
+    {
+        title: '特殊符号',
+        label: '基础',
+        time: '2020-07-26 15:57:17',
+        id: 'base-3',
+        desc: ''
+    },
 ]
 
 export default experience

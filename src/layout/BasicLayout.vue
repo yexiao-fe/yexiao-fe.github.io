@@ -2,16 +2,20 @@
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import BasicHeader from "./BasicHeader.vue";
+import { NConfigProvider } from "naive-ui";
+import { zhCN, dateZhCN } from "naive-ui";
 
 const route = useRoute();
 const className = computed(() => route.path.split("/")[1]);
-console.log(route.path)
+console.log(route.path);
 </script>
 
 <template>
   <basic-header></basic-header>
   <main :class="className">
-    <router-view></router-view>
+    <n-config-provider :locale="zhCN" :date-locale="dateZhCN">
+      <router-view></router-view>
+    </n-config-provider>
   </main>
 </template>
 

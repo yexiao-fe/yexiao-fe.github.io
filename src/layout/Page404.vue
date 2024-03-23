@@ -6,7 +6,7 @@ import { useRouter } from "vue-router";
 
 /*************数据***************/
 
-const targetPath = "/homepage";
+const targetPath = "/home";
 const count = ref(10);
 let timer = null;
 const router = useRouter();
@@ -33,7 +33,7 @@ function clearTimer() {
 </script>
 
 <template>
-  <div class="page404">
+  <div class="page404 vc">
     <h1>404</h1>
     <router-link :to="targetPath">{{ count }}s 后跳转到首页🐒</router-link>
   </div>
@@ -41,14 +41,10 @@ function clearTimer() {
 
 <style lang="less" scoped>
 .page404 {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
   font-size: 32px;
   h1 {
     font-size: 120px;
-    color: @green-color-1;
+    color: green;
   }
 }
 </style>

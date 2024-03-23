@@ -73,7 +73,7 @@ const activeHref = ref(0);
 <template>
   <div class="markdown">
     <div v-html="md.render(source)" v-if="source" class="markdown-body" />
-    <div class="markdown-list">
+    <!-- <div class="markdown-list">
       <div>目录</div>
       <a
         v-for="(item, index) in list"
@@ -83,6 +83,6 @@ const activeHref = ref(0);
         :class="{active: activeHref === index}"
         @click="activeHref = index"
       >{{item.title}}</a>
-    </div>
+    </div> -->
   </div>
 </template>

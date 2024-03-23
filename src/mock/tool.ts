@@ -6,26 +6,30 @@ interface item {
 
 interface children {
     title: string;
-    detail: Array<item>;
+    component: string;
+    width?: string;
+    height?: string;
+    children?: Array<item>;
 }
 
 const tool: Array<children> = [
     {
-        title: '个人开发工具',
-        detail: [
-            {
-                name: '时间转换',
-                component: 'TimeConversion',
-            },
-            {
-                name: '快捷计算',
-                component: 'QuickCalculation',
-            }
-        ]
+        title: '日期时间转换',
+        component: 'DatetimeConversion',
+        width: '680px',
+        height: '300px',
+    },
+    {
+        title: '身体质量指数（BMI）计算',
+        component: 'BmiCount',
+        height: '300px',
     },
     {
         title: '第三方工具',
-        detail: [
+        component: 'ThirdParty',
+        width: 'calc(100% - 20px)',
+        height: 'inherit',
+        children: [
             {
                 name: '菜鸟工具',
                 url: 'https://c.runoob.com/'
@@ -35,16 +39,24 @@ const tool: Array<children> = [
                 url: 'https://tinypng.com/'
             },
             {
-                name: 'Palette 色彩工具',
-                url: 'https://arco.design/palette/list'
+                name: '10M以下 图片压缩',
+                url: 'https://www.gaitubao.com/jpg-gif-png'
+            },
+            {
+                name: '草料二维码',
+                url: 'https://cli.im/url'
             },
             {
                 name: 'Three 编辑器',
                 url: 'https://threejs.org/editor/'
             },
             {
-                name: '坐标拾取器',
+                name: '高德坐标拾取器',
                 url: 'https://lbs.amap.com/tools/picker'
+            },
+            {
+                name: 'Palette 色彩工具',
+                url: 'https://arco.design/palette/list'
             },
         ]
     },

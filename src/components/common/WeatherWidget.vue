@@ -1,25 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import axios from "axios";
-/*************获取天气数据************/
-const weatherStr = ref("");
-axios.get("https://api.oioweb.cn/api/weather/GetWeather").then((res) => {
-  console.log(res);
-  const { alert, city, condition } = res?.data?.result || {};
-  const str =
-    city.name +
-    " " +
-    condition.condition +
-    " " +
-    condition.temp +
-    "℃ " +
-    condition.windDir +
-    " " +
-    condition.windLevel +
-    "级";
-  weatherStr.value = str;
-});
-
 /*************获取日期数据************/
 // 补0
 const supply = (num: number) => {
@@ -60,18 +40,17 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <div class="widget">
+  <div class="widget sm-none">
     <div class="date">{{ dateStr }}</div>
     <div class="time">{{ timeStr }}</div>
-    <div class="weather">{{ weatherStr }}</div>
   </div>
 </template>
 
 <style lang="less" scoped>
 .widget {
   position: absolute;
-  width: 300px;
-  height: 150px;
+  width: 260px;
+  height: 120px;
   top: 20px;
   right: 20px;
   background-color: rgba(0, 0, 0, 0.5);

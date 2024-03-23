@@ -1,24 +1,23 @@
 interface item {
     name: string;
     url: string;
-    isEn?: boolean;
 }
 
 interface children {
     title: string;
-    detail: Array<item>;
+    children: Array<item>;
 }
 
 const document: Array<children> = [
-    {
-        title: '个人技术文档',
-        detail: []
-    },
+    // {
+    //     title: '个人技术文档',
+    //     children: []
+    // },
     {
         title: '综合技术文档',
-        detail: [
+        children: [
             {
-                name: 'MDN',
+                name: 'MDN Web开发文档',
                 url: 'https://developer.mozilla.org/zh-CN/docs/Web/Guide'
             },
             {
@@ -37,142 +36,128 @@ const document: Array<children> = [
     },
     {
         title: '前端框架文档',
-        detail: [
+        children: [
             {
-                name: 'Vue3',
+                name: 'Vue 文档',
                 url: 'https://cn.vuejs.org/',
             },
             {
-                name: 'Vue2',
-                url: 'https://v2.vuejs.org/',
-            },
-            {
-                name: 'Vue Router',
+                name: 'VueRouter 路由',
                 url: 'https://router.vuejs.org/zh/',
             },
             {
-                name: 'Vuex',
+                name: 'Vuex 状态存储',
                 url: 'https://vuex.vuejs.org/zh/',
             },
             {
-                name: 'Pinia',
+                name: 'Pinia 状态存储',
                 url: 'https://pinia.web3doc.top/',
             },
             {
-                name: 'Vite',
+                name: 'Vite 构建工具',
                 url: 'https://vitejs.cn/',
             },
             {
-                name: 'Webpack',
+                name: 'Webpack 构建工具',
                 url: 'https://www.webpackjs.com/',
             },
             {
-                name: 'Webpack',
-                url: 'https://webpack.js.org/',
-                isEn: true,
-            },
-            {
-                name: 'React',
+                name: 'React 文档',
                 url: 'https://zh-hans.react.dev/',
-            },
-            {
-                name: 'React',
-                url: 'https://react.dev/',
-                isEn: true,
             },
         ]
     },
     {
         title: 'UI组件文档',
-        detail: [
+        children: [
             {
-                name: 'Element（vue）',
+                name: 'Element 文档',
                 url: 'https://element.eleme.cn/#/zh-CN/component/installation',
             },
             {
-                name: 'Element-plus（vue）',
+                name: 'ElementPlus 文档',
                 url: 'https://element-plus.org/zh-CN/component/button.html',
             },
             {
-                name: 'Arco Design（vue）',
+                name: 'ArcoDesign 文档',
                 url: 'https://arco.design/vue/docs/start',
             },
             {
-                name: 'Arco Design（react）',
-                url: 'https://arco.design/react/docs/start',
+                name: 'NaiveUI 文档',
+                url: 'https://www.naiveui.com/zh-CN/os-theme/components/button',
             },
             {
-                name: 'View Design（vue）',
+                name: 'ViewDesign 文档',
                 url: 'https://www.iviewui.com/view-ui-plus/guide/introduce',
             },
             {
-                name: 'Ant Design（react）',
+                name: 'AntDesign 文档',
                 url: 'https://ant.design/components/overview-cn/',
+            },
+            {
+                name: 'uniapp 文档',
+                url: 'https://uniapp.dcloud.net.cn/component/',
             },
         ]
     },
     {
         title: '图形可视化文档',
-        detail: [
+        children: [
             {
-                name: 'Echarts',
+                name: 'Echarts 文档',
                 url: 'https://echarts.apache.org/zh/index.html'
             },
             {
-                name: 'D3',
+                name: 'Echarts 案例集合',
+                url: 'https://www.makeapie.cn/echarts'
+            },
+            {
+                name: 'D3 文档',
                 url: 'https://d3js.org/',
-                isEn: true,
             },
             {
-                name: 'Three',
+                name: 'Three 文档',
                 url: 'https://threejs.org/',
-                isEn: true,
             },
             {
-                name: 'Three',
+                name: 'Three 辅助文档',
                 url: 'http://www.webgl3d.cn/pages/aac9ab/',
             },
             {
-                name: 'Antv',
+                name: 'Antv 文档',
                 url: 'https://antv.antgroup.com/',
             },
             {
-                name: '高德地图API',
+                name: '高德地图API 文档',
                 url: 'https://lbs.amap.com/api/loca-v2/intro',
             },
             {
-                name: '百度地图API',
+                name: '百度地图API 文档',
                 url: 'https://lbsyun.baidu.com/index.php?title=jspopularGL',
             },
             {
-                name: 'Arcgis',
-                url: 'https://www.esri.com/en-us/home',
-                isEn: true,
-            },
-            {
-                name: 'Arcgis',
+                name: 'Arcgis 文档',
                 url: 'https://desktop.arcgis.com/zh-cn/documentation/',
             },
             {
-                name: 'Cesium',
+                name: 'Cesium 文档',
                 url: 'https://www.cesium.com/',
-                isEn: true,
             },
         ]
     },
     {
-        title: '其他技术文档',
-        detail: [
+        title: '其它技术文档',
+        children: [
             {
-                name: 'Vuepress',
+                name: 'Vuepress 博客搭建',
                 url: 'https://vuepress.vuejs.org/zh/',
             },
             {
-                name: 'Vitepress',
+                name: 'Vitepress 博客搭建',
                 url: 'https://vitejs.cn/vitepress/',
             },
             {
-                name: 'Hexo',
+                name: 'Hexo 博客搭建',
                 url: 'https://hexo.io/zh-cn/',
             },
         ]

@@ -1,3 +1,10 @@
+# 基于 Vite4 + Vue3 + Pinia + Ts + Naive UI
+
+[vite](https://cn.vitejs.dev/config/)
+[vue3](https://cn.vuejs.org/)
+[ts](http://tslang.cn/docs/home.html)
+[pinia](https://pinia.vuejs.org/zh/core-concepts/)
+[naive ui](https://www.naiveui.com/zh-CN/os-theme/components/button)
 # 项目启动命令
 
 ```bash
@@ -17,7 +24,7 @@ yan dev
 │   ├── api  # 请求接口
 │   ├── assets  # 静态资源，一般存放图片、音视频、css样式
 │   │   └── vue.svg
-│   ├── components  # 通用业务组件，组件中可能含有api
+│   ├── components  # 通用业务组件或元组件，组件中可能含有api
 │   │   └── HelloWorld.vue
 │   ├── directives # 指令集
 │   ├── filters # 过滤器，一般用来数据转换

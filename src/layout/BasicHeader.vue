@@ -57,7 +57,7 @@ const onResize = (width: number) => {
 
 <template>
   <header>
-    <div class="logo aside" @click="router.push('/homepage')">也笑的博客</div>
+    <div class="logo aside" @click="router.push('/home')">也笑的博客</div>
     <basic-header-nav
       :navList="horNavList"
       v-resize="onResize"
@@ -104,6 +104,7 @@ header {
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  z-index: 1;
 
   .aside {
     width: 200px;

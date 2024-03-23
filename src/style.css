@@ -18,20 +18,13 @@
   list-style: none;
 }
 
+/********************** 标签样式 **********************/
 body {
   background-color: #f2f3f5;
   color: #fff;
   font-size: 14px;
 }
 
-#app {
-  min-width: 320px;
-  height: 100vh;
-}
-
-.wrapper {
-  padding: 20px 10%;
-}
 input {
   height: 22px;
 }
@@ -40,7 +33,48 @@ button {
   cursor: pointer;
 }
 
-/* 自定义标签 */
+/********************** ID 类选择器样式 **********************/
+#app {
+  min-width: 320px;
+  height: 100vh;
+  position: relative;
+}
+
+.wrapper {
+  padding: 20px 10%;
+}
+
+/* 左右垂直居中 Vertical center left and right */
+.vc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 宽高与父级保持一致 Consistent width and height with parent level */
+.wh {
+  width: 100%;
+  height: 100%;
+}
+
+/* 插槽容器 */
+.slot-box {
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+/********************** naive ui **********************/
+.n-date-picker {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+/********************* 自定义标签 *********************/
 red {
   color: red;
 }
@@ -50,6 +84,10 @@ green {
 yellow {
   color: yellow;
 }
+
+/********************** keyframes **********************/
+@keyframes _linear {}
+
 
 @font-face {
   font-family: number;
@@ -69,7 +107,10 @@ yellow {
   }
 }
 @media screen and (max-width: 620px) {
-  .widget {
+  .sm-none {
     display: none;
+  }
+  .sm-width {
+    width: calc(100% - 20px) !important;
   }
 }
