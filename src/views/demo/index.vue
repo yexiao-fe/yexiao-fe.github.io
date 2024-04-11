@@ -58,12 +58,14 @@ const list = ref(demoList);
   <ul>
     <li v-for="(item, index) in list" :key="index" :class="item.className">
       <widget-title :title="item.title"></widget-title>
-      <template v-for="(child, i) in item.children" :key="`${index}-${i}`">
-        <iframe-box :data="child" v-if="item.type === 'project'" class="space"></iframe-box>
-        <demo-box :title="child.name" v-else class="space" :className="item.type">
-          <component :is="comps[child.component]"></component>
-        </demo-box>
-      </template>
+      <div class="flex">
+        <template v-for="(child, i) in item.children" :key="`${index}-${i}`">
+          <iframe-box :data="child" v-if="item.type === 'project'" class="space"></iframe-box>
+          <demo-box :title="child.name" v-else class="space" :className="item.type">
+            <component :is="comps[child.component]"></component>
+          </demo-box>
+        </template>
+      </div>
     </li>
   </ul>
 </template>
@@ -78,6 +80,14 @@ ul {
   .space {
     margin: 10px;
     float: left;
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &>div {
+      flex-shrink: 0;
+    }
   }
 }
 </style>

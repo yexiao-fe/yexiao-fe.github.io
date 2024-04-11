@@ -14,16 +14,18 @@ const list = ref(toolList);
 </script>
 
 <template>
-  <widget-box
-    v-for="(tool, index) in list"
-    :key="index"
-    :title="tool.title"
-    class="unit-box"
-    :width="tool.width"
-    :height="tool.height"
-  >
-    <component :is="comps[tool.component]"></component>
-  </widget-box>
+  <div class="flex">
+    <widget-box
+      v-for="(tool, index) in list"
+      :key="index"
+      :title="tool.title"
+      class="unit-box"
+      :width="tool.width"
+      :height="tool.height"
+    >
+      <component :is="comps[tool.component]"></component>
+    </widget-box>
+  </div>
 </template>
 
 <style lang="less" scoped>
@@ -31,4 +33,12 @@ const list = ref(toolList);
   margin: 10px;
   float: left;
 }
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &>div {
+      flex-shrink: 0;
+    }
+  }
 </style>

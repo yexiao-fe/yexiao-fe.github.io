@@ -27,6 +27,7 @@ const routes = [
         path: '/',
         component: BasicLayout,
         children: dynamicPath,
+        redirect: '/home'
     },
     { path: '/home', component: Home },
     { path: '/:catchAll(.*)', component: Page404 },

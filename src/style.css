@@ -101,10 +101,6 @@ yellow {
   .wrapper {
     padding: 20px;
   }
-  .art-item {
-    margin-left: 20px !important;
-    margin-right: 20px !important;
-  }
 }
 @media screen and (max-width: 620px) {
   .sm-none {

@@ -40,6 +40,7 @@ function refresh() {
   &.js {
     width: calc(50% - 20px);
     --h: 400px;
+    min-width: 680px;
   }
   &.css {
     width: var(--h);
