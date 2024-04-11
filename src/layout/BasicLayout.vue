@@ -28,5 +28,8 @@ main {
   &.article {
     background-color: #000;
   }
+  &.tool {
+    overflow: auto;
+  }
 }
 </style>

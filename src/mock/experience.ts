@@ -6,6 +6,14 @@ interface item {
 
 const experience: Array<item> = [
     {
+        question: 'github master分支下的dist文件夹推送到gh-pages分支',
+        label: 'Github',
+        answer: `<ol>
+            <li>第一步前提条件：dist需先提交到master分支</li>
+            <li>第二步快捷命令：<green>git subtree push --prefix dist origin gh-pages</green></li>
+        </ol>`
+    },
+    {
         question: '正则表达式将时间日期格式化',
         label: 'JS',
         answer: `<ol>

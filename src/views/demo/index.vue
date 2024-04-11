@@ -84,7 +84,7 @@ ul {
   .flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     &>div {
       flex-shrink: 0;
     }

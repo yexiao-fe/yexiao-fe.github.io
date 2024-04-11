@@ -1,7 +1,7 @@
 <template>
   <div class="magnifier" :style="{'--size':`${magnifierSize}px`, '--scale': scale }">
     <img
-      :src="smallImageSrc"
+      :src="imageSrc"
       alt="小图片"
       class="magnifier-small absolute"
       @mousemove="handleMouseMove"
@@ -9,7 +9,7 @@
     <div class="mask absolute" :style="{left: `${x }px`,top: `${y}px`}"></div>
     <div class="magnifier-large absolute">
       <img
-        :src="largeImageSrc"
+        :src="imageSrc"
         alt="大图片"
         class="absolute"
         :style="{left: `${x * scale * -1}px`,top: `${y * scale* -1}px`}"
@@ -19,6 +19,7 @@
 </template>
  
 <script>
+import imageSrc from '@/views/demo/images/shaohua.png'
 export default {
   props: {
     smallImageSrc: {
@@ -40,6 +41,7 @@ export default {
   },
   data() {
     return {
+      imageSrc,
       x: 0,
       y: 0
     };
