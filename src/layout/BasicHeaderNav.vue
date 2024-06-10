@@ -71,6 +71,7 @@ ul {
       float: initial;
       margin: 0;
       border-radius: initial;
+      width: calc(100% - 30px);
       &.active {
         box-shadow: initial;
       }

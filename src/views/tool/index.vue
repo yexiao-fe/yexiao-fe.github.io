@@ -30,15 +30,25 @@ const list = ref(toolList);
 
 <style lang="less" scoped>
 .unit-box {
-  margin: 10px;
-  float: left;
+  margin-bottom: 20px;
+  min-width: 680px;
+  width: calc(50% - 10px);
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 .flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    &>div {
-      flex-shrink: 0;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  & > div {
+    flex-shrink: 0;
   }
+}
+@media screen and (max-width: 1380px) {
+  .unit-box {
+    width: 100%;
+  }
+}
 </style>

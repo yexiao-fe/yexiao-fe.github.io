@@ -15,7 +15,7 @@ function openWindow(url) {
     v-for="(doc, index) in docList"
     :key="index"
     :title="doc.title"
-    class="unit-box sm-width"
+    class="unit-box"
     width=""
     height="inherit"
   >
@@ -33,8 +33,8 @@ function openWindow(url) {
 
 <style lang="less" scoped>
 .unit-box {
-  width: calc(50% - 20px);
-  margin: 10px;
+  width: calc(100% - 40px);
+  margin: 20px 20px 0;
   float: left;
 }
 </style>

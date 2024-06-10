@@ -65,6 +65,10 @@ const document: Array<children> = [
                 name: 'React 文档',
                 url: 'https://zh-hans.react.dev/',
             },
+            {
+                name: 'uniapp 文档',
+                url: 'https://uniapp.dcloud.net.cn/component/',
+            },
         ]
     },
     {
@@ -93,10 +97,6 @@ const document: Array<children> = [
             {
                 name: 'AntDesign 文档',
                 url: 'https://ant.design/components/overview-cn/',
-            },
-            {
-                name: 'uniapp 文档',
-                url: 'https://uniapp.dcloud.net.cn/component/',
             },
         ]
     },

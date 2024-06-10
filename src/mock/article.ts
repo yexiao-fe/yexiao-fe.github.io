@@ -29,11 +29,18 @@ const experience: Array<item> = [
         desc: 'Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。'
     },
     {
-        title: '日期格式化',
-        label: 'js-2',
+        title: 'nginx 的安装及配置',
+        label: 'Nginx',
         time: '2020-11-02 23:25:43',
+        id: 'nginx-2',
+        desc: '返回date对象距1970年1月1日午夜之间的毫秒数(时间戳)'
+    },
+    {
+        title: '日期格式化',
+        label: 'Function',
+        time: '2020-10-27 20:16:54',
         id: 'js-2',
-        desc: ''
+        desc: '返回date对象距1970年1月1日午夜之间的毫秒数(时间戳)'
     },
     {
         title: '览器解析过程',

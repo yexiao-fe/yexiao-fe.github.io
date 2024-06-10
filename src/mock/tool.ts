@@ -16,18 +16,19 @@ const tool: Array<children> = [
     {
         title: '日期时间转换',
         component: 'DatetimeConversion',
-        width: '680px',
+        width: '',
         height: '300px',
     },
     {
         title: '身体质量指数（BMI）计算',
         component: 'BmiCount',
+        width: '',
         height: '300px',
     },
     {
         title: '第三方工具',
         component: 'ThirdParty',
-        width: 'calc(100% - 20px)',
+        width: '100%',
         height: 'inherit',
         children: [
             {
@@ -57,6 +58,10 @@ const tool: Array<children> = [
             {
                 name: 'Palette 色彩工具',
                 url: 'https://arco.design/palette/list'
+            },
+            {
+                name: '身份证生成',
+                url: 'https://sfz.tool90.com/sfz/generate.html'
             },
         ]
     },
